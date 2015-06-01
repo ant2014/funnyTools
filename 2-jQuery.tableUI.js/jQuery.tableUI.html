@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>这是一个极简单的jQuery插件案例</title>
+	<style>
+	table{ width:500px; border: 1px solid #ccc}
+	.evenRow{ background-color:red;}
+	.oddRow{ background-color: yellow;}
+	.activeRow{ background-color: blue;}
+	</style>
+</head>
+<body>
+	<h1>这是一个特别简单的jQuery插件案例，本tableUI插件主要功能是装饰表格，例如，表格奇偶行颜色交替，当鼠标移动到上面的时候，高亮当前行，关于jQuery插件的基础知识可以访问<a href="http://www.coolwubo.com/work/5546dec7d7610e9368714dda">jQuery插件开发入门</a>
+	</h1>
+	<table>
+		<tr>
+			<td>1</td>
+			<td>content 1</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>content 2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>content 3</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>content 4</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>content 5</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>content 6</td>
+		</tr>
+	</table>
+	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+	<script type="text/javascript" src="tableUI.js"></script>
+	<script>
+	$().ready(function(){
+		$("table").tableUI();
+	})
+
+	</script>
+</body>
+</html>
