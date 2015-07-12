@@ -9,9 +9,9 @@
 
 3、用原生JS实现焦点轮播图
 CSS:
-#container 600x400,overflow:hidden;position:relative;
-#list 4200*400,position:absolute;z-index:1
-img float:left;
+    #container 600x400,overflow:hidden;position:relative;
+    #list 4200*400,position:absolute;z-index:1
+    img float:left;
 
 布局上，最外层的container设置600X400的合适的显示宽高，并设置overflow为hidden，position为relative为子元素的绝对定位打下基础。
 第二层div#list的宽为所有子图片的宽的和，采用absolute定位，通过设置left为不断变小的负值，来实现页面向左移动的效果。
