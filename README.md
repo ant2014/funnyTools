@@ -51,3 +51,15 @@ container.mouseout时setInterval();
         var scrollWidth = scrollPercent+"%";
         $('#scrollProgress').css("width",scrollWidth);
     }).trigger('scroll');
+
+
+###6、LoadingWidth.js
+效果图可参见[点击这里](http://www.coolwubo.com/funny/4LoadingWidth/index.html)
+
+在前端，实现网页的进度条目前还没有一个比较精确的方案，都是一些模拟进度。即页面打开的时候是 1%，然后定时器增加进度到 99%，然后 window.onload 之后，进度跑到 100%。
+
+使用随机函数生成随机的时间和随机的进度
+
+        var random = function(min, max){
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        };
