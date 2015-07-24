@@ -1,11 +1,17 @@
 # funnyTools
 这是一个用CSS/JavaScript/jQuery实现的小玩意儿
 
-###1、ToolTipsTooltips也被称为屏幕提示，它是当鼠标悬停在一个图标、图片、超链接或其它元素上面的时候出现的一串提示信息。  
-这是一个纯CSS实现的小例子。  
+###1、ToolTip
 你可以[点击这里](http://www.coolwubo.com/funny/1ToolTip/index.html)来查看效果
 
-###2、这是一个特别简单的jQuery插件案例，本tableUI插件主要功能是装饰表格，例如，表格奇偶行颜色交替，当鼠标移动到上面的时候，高亮当前行，关于jQuery插件开发的基础知识可以访问[jQuery插件开发入门](http://www.coolwubo.com/work/5546dec7d7610e9368714dda)
+ToolTipsTooltips也被称为屏幕提示，它是当鼠标悬停在一个图标、图片、超链接或其它元素上面的时候出现的一串提示信息。  
+这是一个纯CSS实现的小例子。 
+
+
+###2、jQuery.tableUI.js
+这是一个特别简单的jQuery插件案例，本tableUI插件主要功能是装饰表格，例如，表格奇偶行颜色交替，当鼠标移动到上面的时候，高亮当前行。关于这个案例，你可以学到最简单的jQuery插件的写法。
+
+关于jQuery插件开发的基础知识可以访问[jQuery插件开发入门](http://www.coolwubo.com/work/5546dec7d7610e9368714dda)
 
 ###3、使用原生JS实现焦点轮播图    
 效果图可参见[点击这里](http://www.coolwubo.com/funny/2JSlunbo/index.html)
@@ -35,15 +41,13 @@ container.mouseout时setInterval();
 
 核心代码：
 
-  $(window).scroll(function(){
-      var scrollTo = $(window).scrollTop(),
-          docHeight = $(document).height(),
-          windowHeight = $(window).height();
-  
-      scrollPercent = (scrollTo / (docHeight-windowHeight)) * 100;
-      scrollPercent = scrollPercent.toFixed(1);
-  
-      $('#showProgress').text(scrollPercent+"%");
-      var scrollWidth = scrollPercent+"%";
-      $('#scrollProgress').css("width",scrollWidth);
-  }).trigger('scroll');
+    $(window).scroll(function(){
+        var scrollTo = $(window).scrollTop(),
+            docHeight = $(document).height(),
+            windowHeight = $(window).height();
+        scrollPercent = (scrollTo / (docHeight-windowHeight)) * 100;
+        scrollPercent = scrollPercent.toFixed(1);
+        $('#showProgress').text(scrollPercent+"%");
+        var scrollWidth = scrollPercent+"%";
+        $('#scrollProgress').css("width",scrollWidth);
+    }).trigger('scroll');
