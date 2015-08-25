@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <style>
+    img {
+      display: none;
+      width: 100px;
+      height: 100px;
+    }
+
+    input:checked + img {
+      display: block;
+    }
+
+    input {
+      position: absolute;
+      left: -9999px;
+    }
+
+    label {
+      cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="cont">
+      <input id="img1" name="img" type="radio" checked="checked">
+      <img src="xiaoxin1.jpg">
+      <input id="img2" name="img" type="radio">
+      <img src="xiaoxin2.jpg">
+    </div>
+    <div id="nav">
+      <label for="img1">第一张</label>
+      <label for="img2">第二张</label>
+    </div>
+
+
+    <h1>从这里开始是说明</h1>
+    <ol>
+      <li>控制所有img，display:none; 让其脱离文档流，不占用位置。</li>
+      <li>为checkbox或者radio加上label，让对label中文字的点击也同时对checkbox/radio生效，使用for关联相应id</li>
+      <li>input:checked + img {display: block;} 使被选中的radio紧跟的img显示出来</li>
+    </ol>
+  </body>
+</html>
