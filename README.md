@@ -63,3 +63,15 @@ container.mouseout时setInterval();
         var random = function(min, max){
             return Math.floor(Math.random() * (max - min + 1) + min);
         };
+
+### 7、RequireJs
+
+1. <\script type="text/javascript" src="require.js" data-main="main"><\/script> 使用该句引入requireJs，data-main指定了main.js文件，作为入口文件，require.js加载完后，会立即调用的
+2. main.js中定义了requirejs.config定义一些常用库的别名和baseUrl。还可以使用requirejs(['jquery','validate'], function ($,validate)){.....}来调用和使用模块
+3. validate.js中使用define(['jquery'], function ($){return ...}定义了一个模块，可以在requirejs中调用
+
+### 8、cssLunbo
+
+1. 控制所有img，display:none; 让其脱离文档流，不占用位置。
+2. 为checkbox或者radio加上label，让对label中文字的点击也同时对checkbox/radio生效，使用for关联相应id
+3. input:checked + img {display: block;} 使被选中的radio紧跟的img显示出来
